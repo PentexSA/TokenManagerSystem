@@ -29,16 +29,10 @@
         "prettier"
     ],
     "rules": {
-      "react-hooks/rules-of-hooks": "error",
-      "prettier/prettier": "error",
+			"react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
       "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
       "import/prefer-default-export": "off",
-      "settings": {
-        "import/resolver": {
-          "typescript": {}
-        }
-      },
       "import/extensions": [
         "error",
         "ignorePackages",
@@ -47,5 +41,10 @@
           "tsx": "never"
         }
       ]
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
     }
 }
