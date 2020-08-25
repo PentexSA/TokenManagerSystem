@@ -34,6 +34,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
+    "git-cz": "^4.7.0",
     "husky": "^4.2.5",
     "jest": "^25.1.0",
     "lint-staged": "^10.2.13",
@@ -53,6 +54,11 @@
     "hooks": {
       "pre-commit": "lint-staged",
       "pre-push": "yarn test"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
     }
   },
   "jest": {
