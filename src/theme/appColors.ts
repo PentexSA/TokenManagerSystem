@@ -1,7 +1,7 @@
 import colors from './colors.json';
 
 const Colors = {
-  primary: colors.Nero,
+  primary: colors.EerieBlack,
   primaryText: colors.QuickSilver,
 };
 
