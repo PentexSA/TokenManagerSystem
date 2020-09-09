@@ -26,7 +26,10 @@ const Tabs = ({
             onPress={(): void => handler(index)}
             testID={`button-${index}`}
           >
-            <TabsText testID={`button-${index}-title`}>
+            <TabsText
+              selected={index === select}
+              testID={`button-${index}-title`}
+            >
               {tab.info.label}
             </TabsText>
             {index === select && <Line />}
@@ -36,7 +39,7 @@ const Tabs = ({
       {tabs.map((tab, index) =>
         index === select
           ? React.cloneElement(tab.component, {
-              key: `content${tab.info.label}`,
+              key: `content-${tab.info.label}`,
               childrenStyle,
             })
           : null,

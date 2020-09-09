@@ -4,7 +4,6 @@ export type TabsProps = {
   onTabSelected?: (tab: Tab) => void;
   childrenStyle?: StyleProp<ViewStyle>;
   tabs: Tab[];
-
   testID?: string;
 };
 
@@ -17,6 +16,4 @@ interface Tab {
 
 export type Selected = {
   selected: boolean;
-  color: string;
-  borderColor: string;
 };
