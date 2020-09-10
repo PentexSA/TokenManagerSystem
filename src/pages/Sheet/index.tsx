@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Tabs from '@/components/Tabs';
+import Fields from '@/components/Fields';
 
 import {
   Container,
@@ -11,14 +12,64 @@ import {
   Column,
   Generation,
   Title,
-  Body,
-  Dot,
-  Label,
-  SubTitle,
   TitleContainer,
-  Row,
-  DotContainer,
 } from '@/pages/Sheet/styles';
+
+const sheetSkeleton = {
+  attributes: {
+    physical: {
+      title: 'Físicos',
+      fields: [
+        {
+          title: 'Força',
+          levels: [1, 1, 1, 0, 0],
+        },
+        {
+          title: 'Destreza',
+          levels: [1, 1, 1, 1, 1],
+        },
+        {
+          title: 'Vigor',
+          levels: [1, 1, 1, 1, 0],
+        },
+      ],
+    },
+    social: {
+      title: 'Sociais',
+      fields: [
+        {
+          title: 'Carisma',
+          levels: [1, 1, 1, 1, 1],
+        },
+        {
+          title: 'Manipulação',
+          levels: [1, 1, 1, 1, 0],
+        },
+        {
+          title: 'Aparência',
+          levels: [1, 1, 1, 1, 1],
+        },
+      ],
+    },
+    mental: {
+      title: 'Mentais',
+      fields: [
+        {
+          title: 'Percepção',
+          levels: [1, 1, 1, 0, 0],
+        },
+        {
+          title: 'Inteligência',
+          levels: [1, 1, 1, 1, 1],
+        },
+        {
+          title: 'Raciocínio',
+          levels: [1, 1, 1, 1, 0],
+        },
+      ],
+    },
+  },
+};
 
 const Sheet: React.FC = () => {
   return (
@@ -50,127 +101,19 @@ const Sheet: React.FC = () => {
             info: {
               label: 'Físicos',
             },
-            component: (
-              <>
-                <SubTitle>Físicos</SubTitle>
-                <Body>
-                  <Row>
-                    <Label>Força</Label>
-                    <DotContainer>
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot />
-                      <Dot />
-                      <Dot />
-                    </DotContainer>
-                  </Row>
-                  <Row>
-                    <Label>Destreza</Label>
-                    <DotContainer>
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                    </DotContainer>
-                  </Row>
-                  <Row>
-                    <Label>Vigor</Label>
-                    <DotContainer>
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot />
-                      <Dot />
-                    </DotContainer>
-                  </Row>
-                </Body>
-              </>
-            ),
+            component: <Fields data={sheetSkeleton.attributes.physical} />,
           },
           {
             info: {
               label: 'Sociais',
             },
-            component: (
-              <>
-                <SubTitle>Sociais</SubTitle>
-                <Body>
-                  <Row>
-                    <Label>Carisma</Label>
-                    <DotContainer>
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                    </DotContainer>
-                  </Row>
-                  <Row>
-                    <Label>Manipulação</Label>
-                    <DotContainer>
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                    </DotContainer>
-                  </Row>
-                  <Row>
-                    <Label>Aparência</Label>
-                    <DotContainer>
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot />
-                    </DotContainer>
-                  </Row>
-                </Body>
-              </>
-            ),
+            component: <Fields data={sheetSkeleton.attributes.social} />,
           },
           {
             info: {
               label: 'Mentais',
             },
-            component: (
-              <>
-                <SubTitle>Mentais</SubTitle>
-                <Body>
-                  <Row>
-                    <Label>Percepção</Label>
-                    <DotContainer>
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot />
-                      <Dot />
-                    </DotContainer>
-                  </Row>
-                  <Row>
-                    <Label>Inteligência</Label>
-                    <DotContainer>
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot />
-                      <Dot />
-                    </DotContainer>
-                  </Row>
-                  <Row>
-                    <Label>Raciocínio</Label>
-                    <DotContainer>
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                      <Dot marked />
-                    </DotContainer>
-                  </Row>
-                </Body>
-              </>
-            ),
+            component: <Fields data={sheetSkeleton.attributes.mental} />,
           },
         ]}
       />
