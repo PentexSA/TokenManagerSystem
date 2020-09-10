@@ -6,7 +6,7 @@ import { View, Text } from 'react-native';
 
 import Tabs from '@/components/Tabs';
 
-describe('Component: StockPosition', () => {
+describe('Component: Tabs', () => {
   const props = {
     onTabSelected: jest.fn(),
     tabs: [
