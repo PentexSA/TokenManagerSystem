@@ -46,3 +46,8 @@ export const Title = styled.Text`
   font-size: 30px;
   color: ${Colors.primaryText};
 `;
+
+export const VerticalScroll = styled.ScrollView`
+  flex: 1;
+  margin-bottom: 5px;
+`;

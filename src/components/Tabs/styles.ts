@@ -7,7 +7,7 @@ export const ContainerTabs = styled.View`
   flex-direction: row;
   border-radius: 20px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 `;
 
 export const Button = styled.TouchableOpacity`
@@ -22,7 +22,6 @@ export const TabsText = styled.Text`
   font-size: ${({ selected }: Selected): string =>
     selected ? '15px' : '14px'};
   color: ${Colors.secondaryText};
-  text-transform: uppercase;
   padding: 0 15px;
   padding-bottom: 6px;
 `;

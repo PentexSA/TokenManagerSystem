@@ -20,7 +20,7 @@ const Fields = ({ data }: Field): JSX.Element => {
           renderItem={({ item }) => (
             <Row>
               <Label>{item.title}</Label>
-              <Dots levels={item.levels} />
+              <Dots levels={item.levels} title={item.title} />
             </Row>
           )}
         />
