@@ -286,12 +286,7 @@ const Sheet: React.FC = () => {
           <Column>
             <Name>Lestat D Auvergne</Name>
             <Generation>8 Geração</Generation>
-            <ClanIcon
-              source={{
-                uri:
-                  'https://img3.gratispng.com/dy/af93752d8fdd2f373b62bf6887566e36/L0KzQYm3VcEzN6p4iZH0aYP2gLBuTgZidaFuitc2dHjoPb7okCF2baNmfNc2YoL4erLvTgN6dZN0hJ91YYPyfbP5gb1oaZ8yTdNvNnHkSbeAVsA1QGIzSqsDM0C5RIi4VcI3OWI5UakANEi2RHB3jvc=/kisspng-vampire-the-masquerade-brujah-symbol-lasombra-gan-5af6aa9f760481.2983064715261149754834.png',
-              }}
-            />
+            <Generation>Brujah</Generation>
           </Column>
           <Thumbnail
             source={{
