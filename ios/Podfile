@@ -8,6 +8,7 @@ target 'tms' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+
   target 'tmsTests' do
     inherit! :complete
     # Pods for testing
