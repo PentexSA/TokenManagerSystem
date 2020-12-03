@@ -3,7 +3,7 @@ import linearGradient from 'react-native-linear-gradient';
 import Colors from '@/theme/appColors';
 
 export const Container = styled(linearGradient).attrs({
-  colors: ['#091707', '#050D03'],
+  colors: [Colors.primary, Colors.secondary],
 })`
   flex: 1;
   padding: 0 20px;
@@ -40,6 +40,7 @@ export const Column = styled.View`
 
 export const TitleContainer = styled.View`
   align-items: center;
+  margin-top: 20px;
 `;
 
 export const Title = styled.Text`
@@ -50,4 +51,27 @@ export const Title = styled.Text`
 export const VerticalScroll = styled.ScrollView`
   flex: 1;
   margin-bottom: 5px;
+`;
+
+export const Body = styled.View`
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Input = styled.TextInput.attrs({ textAlign: 'center' })`
+  width: 45%;
+  border-bottom-width: 1px;
+  border-color: ${Colors.secondaryText};
+  font-size: 15px;
+  color: #ff0000;
+  padding: 5px 0;
+`;
+export const Row = styled.View`
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+`;
+
+export const DotContainer = styled.View`
+  margin-top: 15px;
 `;

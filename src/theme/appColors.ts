@@ -1,8 +1,8 @@
 import colors from './colors.json';
 
 const Colors = {
-  primary: colors.EerieBlack,
-  greenNero: colors.Nero,
+  primary: colors.MyrtleLigth,
+  secondary: colors.MyrtleSilver,
   primaryText: colors.QuickSilver,
   secondaryText: colors.Boulder,
   primaryDotColor: colors.Alizarin,

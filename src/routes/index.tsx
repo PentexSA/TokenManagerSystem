@@ -41,16 +41,29 @@ const MainRoutes: React.FC = () => (
   <Tab.Navigator
     tabBarOptions={{
       style: {
-        backgroundColor: '#301818',
+        backgroundColor: 'black',
         borderTopWidth: 0,
       },
+      labelStyle: { color: '#900' },
     }}
     screenOptions={({ route }) => ({
-      tabBarIcon: () => {
+      tabBarIcon: ({ focused }: { focused: boolean }) => {
         if (route.name === 'Frente') {
-          return <Icon name="align-left" size={30} color="#900" />;
+          return (
+            <Icon
+              name="align-left"
+              size={30}
+              color={focused ? '#ff0000' : '#900'}
+            />
+          );
         }
-        return <Icon name="align-right" size={30} color="#900" />;
+        return (
+          <Icon
+            name="align-right"
+            size={30}
+            color={focused ? '#ff0000' : '#900'}
+          />
+        );
       },
     })}
   >

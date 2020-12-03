@@ -1,7 +1,8 @@
 export type Levels = {
   levels: number[];
+  labels: string[];
+  numberLabels: number[];
   title: string;
-  square?: boolean;
 };
 
 export type Marked = {

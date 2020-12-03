@@ -1,9 +1,10 @@
 export type Field = {
   data: {
-    title: string;
+    title?: string;
     fields: {
       title: string;
       levels: number[];
+      square?: boolean;
     }[];
   };
 };
