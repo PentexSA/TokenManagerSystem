@@ -18,6 +18,7 @@
 		53C61C8218DE36ECD18B8A41 /* libPods-tms.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D903350CB30AF94004DE72A /* libPods-tms.a */; };
 		76DE312080F937A16FEDAF01 /* libPods-tms-tmsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BBDDAE66B3E784F018ED79 /* libPods-tms-tmsTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8C4E318825786D5A00B02D39 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E318725786D5A00B02D39 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		2D903350CB30AF94004DE72A /* libPods-tms.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tms.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C1E9ABBD7B8F1FB08F13C9 /* Pods-tms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tms.release.xcconfig"; path = "Target Support Files/Pods-tms/Pods-tms.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = tms/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8C4E318625786D5900B02D39 /* tms-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tms-Bridging-Header.h"; sourceTree = "<group>"; };
+		8C4E318725786D5A00B02D39 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		8D2CC2458EA95A465622323C /* Pods-tms-tmsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tms-tmsTests.release.xcconfig"; path = "Target Support Files/Pods-tms-tmsTests/Pods-tms-tmsTests.release.xcconfig"; sourceTree = "<group>"; };
 		C4381B81CA9C1F247358610D /* Pods-tms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tms.debug.xcconfig"; path = "Target Support Files/Pods-tms/Pods-tms.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -117,7 +120,6 @@
 			children = (
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		13B07FAE1A68108700A75B9A /* tms */ = {
@@ -166,6 +168,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				8C4E318725786D5A00B02D39 /* File.swift */,
 				8CF8C187250AD580002729FE /* Fonts */,
 				13B07FAE1A68108700A75B9A /* tms */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -174,6 +177,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				4C03E3EE77AAD25CB835E730 /* Pods */,
 				10DE683CE09148E19E901F8F /* Resources */,
+				8C4E318625786D5900B02D39 /* tms-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -292,7 +296,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1210;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -587,6 +591,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				8C4E318825786D5A00B02D39 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,6 +633,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2B849B99DDD12AB1E9A72E0E /* Pods-tms-tmsTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -651,6 +657,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D2CC2458EA95A465622323C /* Pods-tms-tmsTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = tmsTests/Info.plist;
@@ -684,6 +691,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = tms;
+				SWIFT_OBJC_BRIDGING_HEADER = "tms-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -706,6 +714,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = tms;
+				SWIFT_OBJC_BRIDGING_HEADER = "tms-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

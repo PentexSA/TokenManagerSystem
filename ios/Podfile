@@ -7,7 +7,8 @@ target 'tms' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
-
+  pod 'React-jsi', :path => '../node_modules/react-native/ReactCommon/jsi', :modular_headers => true
+  pod 'WatermelonDB', :path => '../node_modules/@nozbe/watermelondb'
 
   target 'tmsTests' do
     inherit! :complete
